@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Category',
+            name='category',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50)),
@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
                 ('publisher', models.TextField()),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('categories', models.ManyToManyField(to='Category.category')),
+                ('categories', models.ManyToManyField(to='category.category')),
             ],
             options={
                 'db_table': 'products',

@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('Category', '0001_initial'),
+        ('category', '0001_initial'),
     ]
 
     operations = [
@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('cart_id', models.CharField(max_length=50)),
                 ('date_added', models.DateTimeField(auto_now_add=True)),
                 ('quantity', models.IntegerField(default=1)),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Category.product')),
+                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='category.product')),
             ],
             options={
                 'db_table': 'cart_items',
