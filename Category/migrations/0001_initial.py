@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=255, unique=True)),
                 ('slug', models.SlugField(max_length=255, unique=True)),
                 ('price', models.DecimalField(decimal_places=2, max_digits=9)),
-                ('image', models.ImageField(upload_to='images/')),
+                ('image', models.ImageField(upload_to='image/')),
                 ('quantity', models.IntegerField()),
                 ('description', models.TextField()),
                 ('publisher', models.TextField()),
